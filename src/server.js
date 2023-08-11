@@ -5,6 +5,9 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors());
+app.use(morgan("dev"));
+
+// Endpoint donde recibirá las peticiones.
 app.get("/health", (req, res, next) => {
   res.status(200).send({
     status: "ok",
@@ -26,6 +29,7 @@ app.use((req, res) => {
     message: "Ruta no encontrada",
   });
 });
+
 app.listen(5000, () => {
   console.log(`Server listening at PORT: ${5000}`);
 });
