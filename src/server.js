@@ -5,6 +5,11 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors());
+app.get("/health", (req, res, next) => {
+  res.status(200).send({
+    status: "ok",
+  });
+});
 
 //Middelware de error.
 app.use((err, req, res, next) => {
@@ -20,4 +25,7 @@ app.use((req, res) => {
     status: "error",
     message: "Ruta no encontrada",
   });
+});
+app.listen(5000, () => {
+  console.log(`Server listening at PORT: ${5000}`);
 });
