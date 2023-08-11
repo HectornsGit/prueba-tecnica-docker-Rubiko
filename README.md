@@ -22,7 +22,7 @@
 4. Construye la imagen Docker:
    `docker build -t rubiko-basic-docker .`
 5. Ejecuta el contenedor:
-   `docker run -p 5050:5000 -e GREETINGS="<El mensaje que desees>" rubiko-basic-docker`
+   `docker run -p 5050:5000 -e GREETINGS="Hello Rubiko Tech!" rubiko-basic-docker`
 6. Para acceder a la aplicación puedes utilizar un navegador, Postman o cUrl en esta dirección: `http://localhost:5050/health`
 
 ## Docker-Compose
