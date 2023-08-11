@@ -3,7 +3,7 @@ services:
   web:
     build:
       context: .
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     ports:
       #Externo:Interno
       - "5050:5000"
