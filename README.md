@@ -1,4 +1,4 @@
-# prueba-tecnica-docker-rubiko
+# rubiko-basic-docker
 
 ## Descripción:
 
