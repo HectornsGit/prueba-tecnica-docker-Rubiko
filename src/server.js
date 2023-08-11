@@ -1,18 +1,15 @@
 const express = require("express");
-const morgan = require("morgan");
+
 const cors = require("cors");
 
 const app = express();
 
 app.use(cors());
-app.use(morgan("dev"));
 
 // Endpoint donde recibirá las peticiones.
-app.get("/health", (req, res, next) => {
-  res.status(200).send({
-    status: "ok",
-  });
-});
+const getGreetings = require("./controllers/getGreetings");
+
+app.get("/health", getGreetings);
 
 //Middelware de error.
 app.use((err, req, res, next) => {
@@ -30,6 +27,6 @@ app.use((req, res) => {
   });
 });
 
-app.listen(5000, () => {
-  console.log(`Server listening at PORT: ${5000}`);
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`Server listening at PORT: ${process.env.PORT || 5000}`);
 });
