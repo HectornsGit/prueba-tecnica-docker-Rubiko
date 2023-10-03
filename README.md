@@ -1,7 +1,5 @@
 # rubiko-basic-docker
 
-## Descripción:
-
 ## Aplicación dockerizable con dos servicios:
 
 **Web:**
